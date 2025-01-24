@@ -35,6 +35,9 @@ jobs:
           shasum -a 256 fusion-installer-rs-universal-macos.tar.gz > fusion-installer-rs-universal-macos.tar.gz.sha256
           cd ..
 
+      - name: Make scripts executable
+        run: chmod +x scripts/bump-version.sh
+
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v4
         with:
