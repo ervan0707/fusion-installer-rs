@@ -9,6 +9,7 @@ repository = "https://github.com/Ervan0707/fusion-installer-rs"
 license = "MIT"
 keywords = ["vmware", "fusion", "installer", "macos"]
 categories = ["command-line-utilities"]
+edition = "2021"
 
 [dependencies]
 tokio = { version = "1.0", features = ["full"] }
