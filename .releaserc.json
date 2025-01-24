@@ -1,0 +1,35 @@
+{
+  "branches": ["master"],
+  "plugins": [
+    ["@semantic-release/commit-analyzer"],
+    ["@semantic-release/release-notes-generator"],
+    ["@semantic-release/changelog"],
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "./scripts/bump-version.sh ${nextRelease.version}"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["CHANGELOG.md"]
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "dist/fusion-installer-rs-universal-macos.tar.gz",
+            "label": "fusion-installer-rs-universal-macos.tar.gz"
+          },
+          {
+            "path": "dist/fusion-installer-rs-universal-macos.tar.gz.sha256",
+            "label": "fusion-installer-rs-universal-macos.tar.gz.sha256"
+          }
+        ]
+      }
+    ]
+  ]
+}

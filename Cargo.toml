@@ -1,0 +1,23 @@
+[package]
+name = "fusion-installer-rs"
+version = "0.0.0"
+authors = ["Ervan <ervanroot@gmail.com>"]
+description = "A tool to download and install VMware Fusion on macOS"
+readme = "README.md"
+homepage = "https://github.com/Ervan0707/fusion-installer-rs"
+repository = "https://github.com/Ervan0707/fusion-installer-rs"
+license = "MIT"
+keywords = ["vmware", "fusion", "installer", "macos"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+reqwest = { version = "0.11", features = ["stream"] }
+regex = "1.5"
+anyhow = "1.0"
+indicatif = "0.17"
+clap = { version = "4.0", features = ["derive"] }
+dirs = "5.0"
+futures-util = "0.3"
+bytes = "1.0"
+thiserror = "1.0"
